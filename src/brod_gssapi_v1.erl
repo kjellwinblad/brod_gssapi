@@ -57,7 +57,7 @@ auth(
                     end
                 end,
             case do_while(StartCliFun) of
-                {ok, {sasl_ok, _}} ->
+                {sasl_ok, _} ->
                     setopts(Sock, Mod, [{active, once}]);
                 {error, {sasl_continue, {error, Error}}} ->
                     {error, Error};
