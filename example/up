@@ -6,10 +6,8 @@ docker-compose down
 # Starting kerberos,
 # Avoiding starting up all services at the begining to generate the keytab first
 
-docker-compose build kdc
-docker-compose build zookeeper
-docker-compose build kafka
-docker-compose build client
+docker-compose build
+
 docker-compose up -d kdc
 
 sleep 5
