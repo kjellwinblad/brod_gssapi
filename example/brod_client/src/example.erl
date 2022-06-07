@@ -12,7 +12,7 @@ main(Args) ->
     io:format("Args: ~p~n", [Args]),
     {ok, _} = application:ensure_all_started(brod),
     KafkaBootstrapEndpoints = [{"kafka.kerberos-demo.local", 9093}],
-    Topic = <<"test-topic">>,
+    Topic = <<"mytest">>,
     Partition = 0,
     KeyTab = <<"/var/lib/secret/rig.key">>,
     Principal = <<"rig@TEST.CONFLUENT.IO">>,
